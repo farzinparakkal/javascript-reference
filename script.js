@@ -72,13 +72,63 @@ console.log("\n\n\n\n")
 console.log("\n\n\n\n")
 
 {
-    function car(model,color,type,fuel){
+    function car(brand,model,color,type,fuel){
+        this.brand = brand
         this.model = model
         this.color=color
         this.type=type
         this.fuel=fuel
         this.reveal=()=>{
-            console.log(`Hello sir, This the brand new ${model}, This is a ${}`)
+            console.log(`Hello sir, This the brand new ${model} from ${brand} Motors, It is a ${type} type model and it is powered by a ${fuel} engine, and it's got a beatiful ${color} colour body`)
         }
     }
+    nexon = new car("TATA ","Nexon",'Blue','Compact SUV','Petrol')
+    console.log("car1 :",nexon)
+    nexon.reveal()
+
+    scorpio = new car("Mahindra",'scorpio','black','SUV','Petrol')
+    console.log("car2 : ",scorpio)
+    scorpio.reveal()
+
+    city = new car("Honda",'city','White','sedan','Petrol VVT')
+    console.log("car3 : ",city)
+    city.price = 1200000
+    scorpio.reveal()
+    console.log("Added : {price:",city.price,"}")
+
+    car.prototype.addquote= function(){
+        console.log(`This ${this.model} is a very good car`)
+    }
+
+    nexon.addquote()
+    scorpio.addquote()
+    city.addquote()
+
+}
+
+console.log("\n\n\n\n")
+
+{
+    function animal(type,name,eat){
+        this.type=type
+        this.name=name
+        this.eat=eat
+        this.exp=()=>{
+            console.log(`This is an animal called ${name}, It is a ${type} animal, It is a ${eat} type`)
+        }
+    }
+    cat = new animal('Domestic','cat','carnivore')
+    console.log("animal1 :",cat)
+    cat.exp()
+
+    tiger = new animal('Wild-life','Tiger','Omnivore')
+    console.log("animal2 : ",tiger)
+    tiger.exp()
+
+
+    zebra = new animal('Wild-life','Zebra','Herbivore')
+    console.log("animal3 : ",zebra)
+    zebra.exp()
+    zebra.color ="Black and White"
+
 }
