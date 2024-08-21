@@ -132,3 +132,145 @@ console.log("\n\n\n\n")
     zebra.color ="Black and White"
 
 }
+
+
+
+
+
+console.log("\n\n\n\n")
+
+{
+    class Person{
+        name;
+        age
+        mark
+
+        constructor(name,age,mark){
+            this.name=name
+            this.age=age
+            this.mark=mark
+        }
+
+        greeting(){
+            console.log(`Hello ${this.name}, you are ${this.age} years old`) 
+        }
+    }
+
+    person1 = new Person('Davood',32,76)
+    console.log("person1 :  ", person1)
+    person1.greeting()
+
+
+    person2 = new Person('Jack',22,66)
+    console.log("person2 :  ", person2)
+    person2.year=2002
+    person2.greeting()
+
+}
+
+
+console.log("\n\n\n\n")
+
+{
+    class animal{
+        type
+        name
+        eat
+
+        constructor(type,name,eat){
+        this.type=type
+        this.name=name
+        this.eat=eat
+        }
+        exp(){
+            console.log(`This is an animal called ${this.name}, It is a ${this.type} animal, It is a ${this.eat} type`)
+        }
+    }
+    cat = new animal('Domestic','cat','carnivore')
+    console.log("animal1 :",cat)
+    cat.exp()
+
+    tiger = new animal('Wild-life','Tiger','Omnivore')
+    console.log("animal2 : ",tiger)
+    tiger.exp()
+
+
+    zebra = new animal('Wild-life','Zebra','Herbivore')
+    console.log("animal3 : ",zebra)
+    zebra.exp()
+    zebra.color ="Black and White"
+
+}
+
+
+console.log("\n\n\n\n")
+
+
+{
+    class Animal{
+        name
+
+        constructor(name){
+            this.name=name
+        }
+
+        walking(){
+            console.log(`${this.name} is walking`)
+        }
+    }
+    monkey = new Animal("monkey")
+    console.log("animal1 :",monkey)
+    monkey.walking()
+
+
+    class dog extends Animal{
+        nickname
+
+        constructor(name,nickname){
+            super(name)
+            this.nickname=nickname
+        }
+
+        running(){
+            console.log(`${this.nickname} is running`)
+        }
+    }
+
+    tom = new dog('dog','tom')
+    console.log("tom",tom)
+    tom.walking()
+    tom.running()
+}
+
+console.log("\n\n\n\n")
+
+{
+    //using setter and getter
+
+    class car{
+        name
+        color
+
+        constructor(name){
+            this.name=name
+        }
+
+        set color(color){
+            this.color=color
+        }
+
+        get color(){
+            return  this.color
+        }
+    }
+
+    car1=new car('jaguar')
+    console.log("car1 : ",car1)
+
+    car1.color='red'
+    console.log("car1 : ",car1)
+
+    console.log("color : ",car1.color)
+
+}
+
